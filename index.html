@@ -53,6 +53,7 @@
         .danza-card {
             margin-top: 20px;
             background-color: #F7ED77; /* Establece el color de fondo de las tarjetas */
+            height: 100%;
         }
 
         /* Estilo para las animaciones */
@@ -62,6 +63,91 @@
             height: auto;
             cursor: pointer;
         }
+        h2{
+            color: white;
+        }
+        /* Estilo para las tarjetas de pintores */
+        .pintor-card {
+            margin-top: 20px;
+            background-color: #F7ED77; /* Establece el color de fondo de las tarjetas */
+            height: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Redondea los bordes de las tarjetas */
+        }
+
+        /* Estilo para el botón */
+        .btn-custom {
+            background-color: #C4BC5E; /* Color de fondo del botón personalizado */
+            border-color: #C4BC5E; /* Color del borde del botón personalizado */
+            color: #fff; /* Color del texto del botón personalizado */
+        }
+        /* Estilo para el banner de cookies */
+        #cookie-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Estilo para los botones en el banner de cookies */
+        #cookie-banner button {
+            margin: 0 5px;
+        }
+        .bg-primary_text-white_p-4 {
+            background-color: #C4BC5E;
+            height: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .bg-success_text-white_p-4{
+            background-color: #C4BC7E;
+            height: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .bg-info_text-white_p-4{
+            background-color: #C4BC3E;
+            height: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .tinku, .diablada, .caporal{
+            max-height: 400px; /* Define la altura máxima de las imágenes */
+            width: auto; /* Ajusta automáticamente el ancho en función de la altura máxima */
+
+        }
+        .spoty{
+            max-height: 70px; /* Define la altura máxima de las imágenes */
+            width: auto; 
+        }
+        /* Estilo para el título en 3D */
+        .movie-title-3d {
+            text-transform: uppercase; /* Cambia el texto a mayúsculas */
+            font-size: 28px; /* Tamaño de fuente */
+            color: #fff; /* Color del texto */
+            text-align: center; /* Alineación del texto al centro */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+            font-weight: bold; /* Negrita */
+            letter-spacing: 2px; /* Espaciado entre letras */
+        }
+        /* Estilos para el footer */
+        .footer {
+            background-color: #333; /* Color de fondo del footer */
+            color: #fff; /* Color del texto en el footer */
+            padding: 10px 0; /* Espaciado interno del footer */
+        }
+
+        /* Centra el texto en el footer */
+        .footer p {
+            text-align: center;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -85,7 +171,13 @@
             </ul>
         </div>
     </nav>
-
+     <!-- Banner de Cookies -->
+     <div id="cookie-banner" class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Política de Cookies:</strong> Este sitio utiliza cookies para mejorar la experiencia del usuario. 
+        <button id="accept-cookies" type="button" class="btn btn-success">Aceptar</button>
+        <button id="reject-cookies" type="button" class="btn btn-danger">Rechazar</button>
+        <button id="more-info" type="button" class="btn btn-secondary">Más Información</button>
+    </div>
     <!-- Jumbotron -->
     <div class="jumbotron">
         <h1 class="display-4">Bienvenido a nuestro sitio de arte boliviano</h1>
@@ -129,12 +221,12 @@
             <div class="row">
                 <!-- Tarjeta de artista 1 -->
                 <div class="col-md-4">
-                    <div class="card danza-card">
+                    <div class="card pintor-card">
                         <img src="artista1.jpg" class="card-img-top" alt="Artista 1">
                         <div class="card-body">
                             <h5 class="card-title">Roberto Mamani Mamani</h5>
                             <p class="card-text">Roberto Mamani Mamani es una artista aymara de Bolivia. Su obra es significativa por el uso que hace de la tradición y los símbolos indígenas aymaras.</p>
-                            <a href="https://www.facebook.com/oficialMamaniMamaniBolivia/" class="btn btn-primary">Contacto</a>
+                            <a href="https://www.facebook.com/oficialMamaniMamaniBolivia/" class="btn btn-custom">Contacto</a>
                         </div>
                         <!-- Pinturas del artista 1 -->
                         <div class="card-footer">
@@ -145,12 +237,12 @@
                 </div>
                 <!-- Tarjeta de artista 2 -->
                 <div class="col-md-4">
-                    <div class="card danza-card">
+                    <div class="card pintor-card">
                         <img src="artista2.jpg" class="card-img-top" alt="Artista 2">
                         <div class="card-body">
                             <h5 class="card-title">Jose Maria Payno</h5>
                             <p class="card-text">Artista plástico formado en la escuela de Bellas Artes de Lisboa y en el Círculo Artístico Mario Augusto, de la misma ciudad; y médico veterinario, graduado en la Universidad Autónoma Gabriel René Moreno.</p>
-                            <a href="https://www.artmajeur.com/payno" class="btn btn-primary">Contactos</a>
+                            <a href="https://www.artmajeur.com/payno" class="btn btn-custom">Contacto</a>
                         </div>
                         <!-- Pinturas del artista 2 -->
                         <div class="card-footer">
@@ -161,12 +253,12 @@
                 </div>
                 <!-- Tarjeta de artista 3 -->
                 <div class="col-md-4">
-                    <div class="card danza-card">
+                    <div class="card pintor-card">
                         <img src="artista3.jpg" class="card-img-top" alt="Artista 3">
                         <div class="card-body">
                             <h5 class="card-title">Alex Urquidi</h5>
                             <p class="card-text">Nació en 1979 Cochabamba - Bolivia Pintor e ilustrador Urquidi, Fue criado en la bahía de san francisco, California. De ahí que experimentó con mucha diversidad de culturas al momento de elaborar su arte. Desde arte urbano, asiático, chicano, y todo lo tradicional y clásico.</p>
-                            <a href="https://www.facebook.com/arte.urquidi?locale=es_LA" class="btn btn-primary">Contacto</a>
+                            <a href="https://www.facebook.com/arte.urquidi?locale=es_LA" class="btn btn-custom">Contacto</a>
                         </div>
                         <!-- Pinturas del artista 3 -->
                         <div class="card-footer">
@@ -178,22 +270,195 @@
             </div>
         </div>
     </section>
-
+    <div style="margin-top: 50px;"></div>
     <!-- Sección de Pintura -->
     <section id="pintura">
         <div class="container">
-            <h2>Pintura Boliviana</h2>
-            <p>Contenido sobre pintura boliviana.</p>
+            <h2>Danza Boliviana</h2>
+            <!-- Subsección 1 -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="bg-primary_text-white_p-4">
+                        <h3>Tinku</h3>
+                        <p>El baile del Tinku es una danza folklórica que es una expresión artística del Tinku. Nace de la representación del ritual ceremonial del Tinku llevado a cabo en las comunidades del norte de Potosí y sur de Oruro.
+
+                            Actualmente se baila Tinku en acontecimientos y festividades en Bolivia, se baila en el Carnaval de Oruro, fiesta del Gran Poder ,fiesta de Ch´utillos,etc. como danza representativa de estas regiones y últimamente en otros países donde hay inmigrantes bolivianos. La música del Tinku es parte del repertorio de varios grupos musicales como Los Kjarkas, Kala Marka, llajtaymanta y muchos más.</p>
+                        <a href="https://open.spotify.com/playlist/7nNOgJ79R9rBAsmHiIPvM4?si=31982d86a2a243e6" class="btn btn-light"><img src="spoty_tinku.jpg" class="spoty"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="carousel1" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel1" data-slide-to="1"></li>
+                            <li data-target="#carousel1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="tinku1.jpg" class="tinku" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="tinku2.jpg" class="tinku" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="tinku3.jpg" class="tinku" alt="Imagen 3">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsección 2 -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="bg-success_text-white_p-4">
+                        <h3>Diablada</h3>
+                        <p>La diablada es una danza llamada así por la careta y el traje de diablo que usan los bailarínes.La danza representa el enfrentamiento entre las fuerzas del bien y del mal, reuniendo tanto elementos propios de la religión católica introducida durante la presencia hispánica como los del ritual tradicional andino.Se aprecia principalmente en el Carnaval de Oruro en Bolivia, la Fiesta de la Candelaria en el Perú y en la Fiesta de La Tirana en Chile. El sentido de identidad patrimonial de esta danza es motivo de disputa.</p>
+                        <a href="https://open.spotify.com/playlist/6uv93XujFMQbMskky1q1lU?si=b56205def77c4e4a" class="btn btn-light"><img src="spoty_diablada.jpg" class="spoty"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="carousel2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel1" data-slide-to="1"></li>
+                            <li data-target="#carousel1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="diablada1.jpg" class="diablada" alt="1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="diablada2.jpg" class="diablada" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="diablada3.jpg" class="diablada" alt="Imagen 3">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsección 3 -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="bg-info_text-white_p-4">
+                        <h3>Caporal</h3>
+                        <p>El caporal representa al capataz de los esclavos negros llevados a la zona altiplánica durante la época del Virreinato del Perú. Según el investigador peruano Guillermo Vásquez la danza deriva de otra llamada Tundique y señala que los hermanos Estrada extrajeron de la Saya, solamente a los hombres, los Caporales. La danza es presentada en Perú el 24 de junio de 1975 por Los Uros del Gran Poder cuando viajaron hasta el Cuzco para participar en la Fiesta del Inti Raymi. Al siguiente año la misma agrupación se presentó en el I Festival Folklórico Internacional en Juliaca. A partir de ese entonces nacieron diversas agrupaciones de caporales peruanos en ambas ciudades.</p>
+                        <a href="https://open.spotify.com/playlist/22QJBDL7wssutDGtNAVDKX?si=a7fbccb1c4c54273" class="btn btn-light"><img src="spoty_caporal.jpg" class="spoty"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="carousel3" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel1" data-slide-to="1"></li>
+                            <li data-target="#carousel1" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="caporal1.jpg" class="caporal" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="caporal2.jpg" class="caporal" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="caporal3.jpg" class="caporal" alt="Imagen 3">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    <div style="margin-top: 50px;"></div>
     <!-- Sección de Cine -->
     <section id="cine">
         <div class="container">
             <h2>Cine Boliviano</h2>
-            <p>Contenido sobre cine boliviano.</p>
+
+            <!-- Banner de Película 1 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="movie-banner">
+                        <h3 class="movie-title-3d">Tres pasos al frente</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video de Película 1 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KHk96hh5xTw?si=Q1ERD4tV7fYNkEgr"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Descripción de Película 1 -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="movie-description">La historia de los jóvenes cadetes de la promoción 1933 del Colegio Militar de Bolivia y su heroica decisión de ofrecerse como voluntarios para partir a la guerra del Chaco. Allí deberán enfrentarse cara a cara con la muerte poniendo a prueba su valor y fortaleza, por el amor a su patria, dejando a un lado su inocencia infantil para convertirse en la generación más heroica en la historia de Bolivia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Banner de Película 2 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="movie-banner">
+                        <h3 class="movie-title-3d">Utama</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video de Película 2 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9BQMJ8gw24g?si=mq1IbKiu8ayTSY0F" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Descripción de Película 2 -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="movie-description">
+                        En el árido altiplano boliviano, una pareja de ancianos quechuas vive la misma cotidianidad hace años. En medio de una sequía, Virginio (80) se enferma y consciente de su inminente muerte vive sus últimos días ocultando la enfermedad a Sisa (81).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Puedes continuar agregando banners, videos y descripciones para más películas si es necesario -->
+
         </div>
     </section>
+
 
     <!-- Enlace a los archivos JavaScript de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -209,8 +474,76 @@
                 element.classList.remove("animate__animated", "animate__bounce");
             }, 1000);
         }
+        <!-- JavaScript para la gestión de cookies -->
+        // Función para establecer una cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        // Función para obtener el valor de una cookie
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Mostrar u ocultar el banner de cookies según la elección del usuario
+        function checkCookieConsent() {
+            var cookieConsent = getCookie("cookie-consent");
+            if (cookieConsent === "accepted") {
+                // El usuario aceptó las cookies
+                document.getElementById("cookie-banner").style.display = "none";
+            } else if (cookieConsent === "rejected") {
+                // El usuario rechazó las cookies
+                document.getElementById("cookie-banner").style.display = "none";
+                // Aquí puedes agregar código adicional para manejar el rechazo de cookies
+            } else {
+                // El banner de cookies se muestra si el usuario no ha tomado una decisión
+                document.getElementById("cookie-banner").style.display = "block";
+            }
+        }
+
+        // Manejar eventos de aceptación y rechazo de cookies
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+            setCookie("cookie-consent", "accepted", 365); // Acepta cookies por 1 año
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+
+        document.getElementById("reject-cookies").addEventListener("click", function() {
+            setCookie("cookie-consent", "rejected", 365); // Rechaza cookies por 1 año
+            document.getElementById("cookie-banner").style.display = "none";
+            // Aquí puedes agregar código adicional para manejar el rechazo de cookies
+        });
+
+        // Agregar evento para obtener más información sobre cookies
+        document.getElementById("more-info").addEventListener("click", function() {
+            // Aquí puedes redirigir al usuario a una página de política de cookies o proporcionar más información
+            alert("Aquí puedes proporcionar más información sobre las cookies o redirigir al usuario a una página de política de cookies.");
+        });
+
+        // Verificar el estado de las cookies cuando se carga la página
+        checkCookieConsent();
+    
     </script>
     <!-- Biblioteca de animación CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </body>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">&copy; 2023 Nicole Uribe. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </html>
